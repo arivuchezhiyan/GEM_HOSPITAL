@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -229,22 +229,87 @@
             align-items: center;
         }
 
-        .logo {
-            font-family: 'Playfair Display', serif;
-            font-size: 1.8rem;
-            font-weight: 700;
-            color: var(--primary-green);
+                .logo-container {
             display: flex;
             align-items: center;
+            gap: 12px;
+            text-decoration: none;
         }
 
-        .navbar:not(.scrolled) .logo {
-            color: var(--white);
+        .logo-icon {
+            height: 50px;
+            width: 50px;
+            display: block;
+            flex-shrink: 0;
+            object-fit: contain;
+            filter: brightness(1.2);
+            transition: var(--transition);
         }
 
-        .logo-dot {
+        .logo-icon:hover {
+            filter: brightness(1.35);
+        }
+
+        .logo-text-group {
+            display: flex;
+            flex-direction: column;
+            line-height: 1.2;
+        }
+
+        .logo-main-text {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary-green);
+        }
+
+        .logo-sub-text {
+            font-size: 0.75rem;
             color: var(--deep-gold);
+            letter-spacing: 1px;
+            text-transform: uppercase;
         }
+
+        .navbar:not(.scrolled)         .logo-container {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            text-decoration: none;
+        }
+
+        .logo-icon {
+            height: 50px;
+            width: 50px;
+            display: block;
+            flex-shrink: 0;
+            object-fit: contain;
+            filter: brightness(1.2);
+            transition: var(--transition);
+        }
+
+        .logo-icon:hover {
+            filter: brightness(1.35);
+        }
+
+        .logo-text-group {
+            display: flex;
+            flex-direction: column;
+            line-height: 1.2;
+        }
+
+        .logo-main-text {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary-green);
+        }
+
+        .logo-sub-text {
+            font-size: 0.75rem;
+            color: var(--deep-gold);
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+
+        
 
         .nav-links {
             display: flex;
@@ -1759,7 +1824,7 @@
                 </div>
             </div>
             <a href="#consultation" class="btn btn-gold nav-cta">Book Free Consultation</a>
-            <button class="mobile-menu-btn" id="mobileMenuBtn">☰</button>
+            <button class="mobile-menu-btn" id="mobileMenuBtn">â˜°</button>
         </div>
     </nav>
 
@@ -1767,8 +1832,8 @@
     <div class="mobile-menu" id="mobileMenu">
         <button class="close-menu" id="closeMenuBtn">&times;</button>
         <div style="text-align: center; margin: 20px 0; display: flex; flex-direction: column; gap: 15px;">
-            <a href="https://maps.google.com/?q=GEM+Hospital+Aminjikarai+Chennai" target="_blank" style="color: var(--primary-green); font-weight: 700; font-size: 1.05rem; text-decoration: none;">📍 Chennai</a>
-            <a href="tel:+917200605493" style="color: var(--primary-green); font-weight: 700; font-size: 1.05rem; text-decoration: none;">📞 +91 7200605493</a>
+            <a href="https://maps.google.com/?q=GEM+Hospital+Aminjikarai+Chennai" target="_blank" style="color: var(--primary-green); font-weight: 700; font-size: 1.05rem; text-decoration: none;">ðŸ“ Chennai</a>
+            <a href="tel:+917200605493" style="color: var(--primary-green); font-weight: 700; font-size: 1.05rem; text-decoration: none;">ðŸ“ž +91 7200605493</a>
         </div>
         <a href="#consultation" class="btn btn-gold" style="margin-top: 20px; border:none; text-align:center; width: 100%;">Book Free Consultation</a>
     </div>
@@ -1826,7 +1891,7 @@
             <div class="section-header reveal">
                 <div class="section-badge">Specialized Care</div>
                 <h2>Types of Multi-Organ Transplant We Treat</h2>
-                <div class="royal-divider"><span class="royal-divider-icon">✦</span></div>
+                <div class="royal-divider"><span class="royal-divider-icon">âœ¦</span></div>
             </div>
 
             <div class="hernia-grid">
@@ -1897,7 +1962,7 @@
             <div class="section-header reveal">
                 <h2>Transplant Pathway for Multi-Organ Transplant</h2>
                 <p style="font-size: 1.2rem; color: var(--white); max-width: 800px; margin: 15px auto;">Each step is reviewed by surgeons, physicians, ICU teams, and coordinators for safety.</p>
-                <div class="royal-divider"><span class="royal-divider-icon">✦</span></div>
+                <div class="royal-divider"><span class="royal-divider-icon">âœ¦</span></div>
                 <p style="max-width: 900px; margin: 0 auto; color: var(--text-light);">Care is planned around safety, symptom control, and the fastest sensible return to normal life.</p>
             </div>
 
@@ -1918,10 +1983,10 @@
             <div class="section-header reveal">
                 <h2>Recognise the Symptoms</h2>
                 <p style="font-size: 1.1rem; color: var(--text-light);">Early referral matters when organ function begins to decline.</p>
-                <div class="royal-divider"><span class="royal-divider-icon">✦</span></div>
+                <div class="royal-divider"><span class="royal-divider-icon">âœ¦</span></div>
             </div>
 
-            <div class="symptoms-grid"><div class="symptom-card reveal" style="transition-delay: 0.00s;"><div class="symptom-icon">🔵</div><div><h4>Reduced organ function on routine tests or scans</h4><p>Reduced organ function on routine tests or scans</p></div></div><div class="symptom-card reveal" style="transition-delay: 0.08s;"><div class="symptom-icon">🔵</div><div><h4>Swelling</h4><p>Swelling, fatigue, or poor appetite that keeps worsening</p></div></div><div class="symptom-card reveal" style="transition-delay: 0.00s;"><div class="symptom-icon">🔵</div><div><h4>Repeated hospital admissions or infections</h4><p>Repeated hospital admissions or infections</p></div></div><div class="symptom-card reveal" style="transition-delay: 0.08s;"><div class="symptom-icon">🔵</div><div><h4>Breathlessness</h4><p>Breathlessness, jaundice, or urine output changes</p></div></div><div class="symptom-card reveal" style="transition-delay: 0.00s;"><div class="symptom-icon">🔵</div><div><h4>Poor tolerance to medicines or advanced disease progression</h4><p>Poor tolerance to medicines or advanced disease progression</p></div></div><div class="symptom-card reveal" style="transition-delay: 0.08s;"><div class="symptom-icon">🔵</div><div><h4>Need for dialysis</h4><p>Need for dialysis, support devices, or frequent specialist review</p></div></div></div>
+            <div class="symptoms-grid"><div class="symptom-card reveal" style="transition-delay: 0.00s;"><div class="symptom-icon">ðŸ”µ</div><div><h4>Reduced organ function on routine tests or scans</h4><p>Reduced organ function on routine tests or scans</p></div></div><div class="symptom-card reveal" style="transition-delay: 0.08s;"><div class="symptom-icon">ðŸ”µ</div><div><h4>Swelling</h4><p>Swelling, fatigue, or poor appetite that keeps worsening</p></div></div><div class="symptom-card reveal" style="transition-delay: 0.00s;"><div class="symptom-icon">ðŸ”µ</div><div><h4>Repeated hospital admissions or infections</h4><p>Repeated hospital admissions or infections</p></div></div><div class="symptom-card reveal" style="transition-delay: 0.08s;"><div class="symptom-icon">ðŸ”µ</div><div><h4>Breathlessness</h4><p>Breathlessness, jaundice, or urine output changes</p></div></div><div class="symptom-card reveal" style="transition-delay: 0.00s;"><div class="symptom-icon">ðŸ”µ</div><div><h4>Poor tolerance to medicines or advanced disease progression</h4><p>Poor tolerance to medicines or advanced disease progression</p></div></div><div class="symptom-card reveal" style="transition-delay: 0.08s;"><div class="symptom-icon">ðŸ”µ</div><div><h4>Need for dialysis</h4><p>Need for dialysis, support devices, or frequent specialist review</p></div></div></div>
 
             <div class="symptoms-cta reveal">
                 <p>Concerned about persistent multi-organ transplant? Book a consultation before symptoms progress.</p>
@@ -1937,7 +2002,7 @@
         <div class="container">
             <div class="section-header reveal">
                 <h2>Our Center Helplines</h2>
-                <div class="royal-divider"><span class="royal-divider-icon">✦</span></div>
+                <div class="royal-divider"><span class="royal-divider-icon">âœ¦</span></div>
             </div>
 
             <div class="helplines-grid"><a href="tel:+919150092609" class="helpline-card reveal" style="transition-delay: 0.00s;"><span class="helpline-location">Coimbatore</span><span class="helpline-number"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>+91 9150092609</span></a><a href="tel:+917200605493" class="helpline-card reveal" style="transition-delay: 0.08s;"><span class="helpline-location">Chennai</span><span class="helpline-number"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>+91 7200605493</span></a><a href="tel:+919150092609" class="helpline-card reveal" style="transition-delay: 0.00s;"><span class="helpline-location">Erode</span><span class="helpline-number"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>+91 9150092609</span></a><a href="tel:+918608204638" class="helpline-card reveal" style="transition-delay: 0.08s;"><span class="helpline-location">Pondicherry</span><span class="helpline-number"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>+91 8608204638</span></a><a href="tel:+919150092609" class="helpline-card reveal" style="transition-delay: 0.00s;"><span class="helpline-location">Tiruppur</span><span class="helpline-number"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>+91 9150092609</span></a><a href="tel:+918078711222" class="helpline-card reveal" style="transition-delay: 0.08s;"><span class="helpline-location">Thrissur</span><span class="helpline-number"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>+91 8078711222</span></a></div>
@@ -1953,7 +2018,7 @@
                 <div class="section-badge">Expert Team</div>
                 <h2>Meet Our Specialists</h2>
                 <p style="font-size: 1.1rem; color: var(--text-light); max-width: 650px; margin: 0 auto;">Experienced doctors and surgical teams focused on safe treatment, clear counselling, and reliable follow-up.</p>
-                <div class="royal-divider"><span class="royal-divider-icon">✦</span></div>
+                <div class="royal-divider"><span class="royal-divider-icon">âœ¦</span></div>
             </div>
 
             <div class="specialists-carousel reveal"><div class="doctor-card"><img class="doctor-photo" src="https://source.unsplash.com/featured/400x400/?surgeon,portrait" alt="Dr. V. Ramya"><h4>Dr. V. Ramya</h4><p class="degree">MS, MCh</p><span class="role">Transplant Surgeon</span><a href="tel:+917200605493" class="doctor-phone"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>Book Appointment</a><a href="#consultation" class="btn btn-gold" style="padding: 10px 20px; font-size: 0.9rem;">Consult Now</a></div><div class="doctor-card"><img class="doctor-photo" src="https://source.unsplash.com/featured/400x400/?surgeon,portrait" alt="Dr. V. Ramya"><h4>Dr. V. Ramya</h4><p class="degree">MS, MCh</p><span class="role">Transplant Surgeon</span><a href="tel:+917200605493" class="doctor-phone"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>Book Appointment</a><a href="#consultation" class="btn btn-gold" style="padding: 10px 20px; font-size: 0.9rem;">Consult Now</a></div><div class="doctor-card"><img class="doctor-photo" src="https://source.unsplash.com/featured/400x400/?doctor,portrait" alt="Dr. S. Karthik"><h4>Dr. S. Karthik</h4><p class="degree">MD Anaesthesia</p><span class="role">ICU Intensivist</span><a href="tel:+917200605493" class="doctor-phone"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>Book Appointment</a><a href="#consultation" class="btn btn-gold" style="padding: 10px 20px; font-size: 0.9rem;">Consult Now</a></div></div>
@@ -1972,7 +2037,7 @@
             <div class="section-header reveal">
                 <div class="section-badge">Medical Expertise</div>
                 <h2>Expert Insights</h2>
-                <div class="royal-divider"><span class="royal-divider-icon">✦</span></div>
+                <div class="royal-divider"><span class="royal-divider-icon">âœ¦</span></div>
             </div>
 
             <div class="insights-grid"><article class="insight-card reveal" style="transition-delay: 0.00s;"><img src="https://source.unsplash.com/featured/900x700/?hospital,Multi-Organ+Transplant,doctor" alt="What Patients Should Know Before Multi-Organ Transplant" class="insight-image"><div class="insight-body"><h4>What Patients Should Know Before Multi-Organ Transplant</h4><p>A practical guide to evaluation and donor planning.</p><a href="#consultation" class="insight-link">Read More</a></div></article><article class="insight-card reveal" style="transition-delay: 0.08s;"><img src="https://source.unsplash.com/featured/900x700/?hospital,Multi-Organ+Transplant,doctor" alt="Why Transplant Preparation Starts Long Before Surgery" class="insight-image"><div class="insight-body"><h4>Why Transplant Preparation Starts Long Before Surgery</h4><p>The reason multidisciplinary review is essential for success.</p><a href="#consultation" class="insight-link">Read More</a></div></article><article class="insight-card reveal" style="transition-delay: 0.16s;"><img src="https://source.unsplash.com/featured/900x700/?hospital,Multi-Organ+Transplant,doctor" alt="Follow-Up, Medicines, and Safety After Transplant Care" class="insight-image"><div class="insight-body"><h4>Follow-Up, Medicines, and Safety After Transplant Care</h4><p>How follow-up clinics reduce the risk of complications later on.</p><a href="#consultation" class="insight-link">Read More</a></div></article></div>
@@ -1987,10 +2052,10 @@
             <div class="section-header reveal">
                 <div class="section-badge">Testimonials</div>
                 <h2>Success Stories</h2>
-                <div class="royal-divider"><span class="royal-divider-icon">✦</span></div>
+                <div class="royal-divider"><span class="royal-divider-icon">âœ¦</span></div>
             </div>
 
-            <div class="testimonials-carousel reveal"><div class="testimonial-card"><div class="quote-icon">"</div><div class="stars">★★★★★</div><p class="testimonial-text">"The coordination was excellent and we never felt alone during the process."</p><div class="patient-info"><div class="patient-avatar">S</div><div class="patient-details"><h5>Selva Chennai</h5><span>Multi-Organ Transplant</span></div></div></div><div class="testimonial-card"><div class="quote-icon">"</div><div class="stars">★★★★★</div><p class="testimonial-text">"The transplant team explained the risks carefully and supported us throughout."</p><div class="patient-info"><div class="patient-avatar">F</div><div class="patient-details"><h5>Fathima Coimbatore</h5><span>Multi-Organ Transplant</span></div></div></div><div class="testimonial-card"><div class="quote-icon">"</div><div class="stars">★★★★★</div><p class="testimonial-text">"From evaluation to recovery, everything felt well organised and reassuring."</p><div class="patient-info"><div class="patient-avatar">R</div><div class="patient-details"><h5>Ramesh Pondicherry</h5><span>Multi-Organ Transplant</span></div></div></div></div>
+            <div class="testimonials-carousel reveal"><div class="testimonial-card"><div class="quote-icon">"</div><div class="stars">â˜…â˜…â˜…â˜…â˜…</div><p class="testimonial-text">"The coordination was excellent and we never felt alone during the process."</p><div class="patient-info"><div class="patient-avatar">S</div><div class="patient-details"><h5>Selva Chennai</h5><span>Multi-Organ Transplant</span></div></div></div><div class="testimonial-card"><div class="quote-icon">"</div><div class="stars">â˜…â˜…â˜…â˜…â˜…</div><p class="testimonial-text">"The transplant team explained the risks carefully and supported us throughout."</p><div class="patient-info"><div class="patient-avatar">F</div><div class="patient-details"><h5>Fathima Coimbatore</h5><span>Multi-Organ Transplant</span></div></div></div><div class="testimonial-card"><div class="quote-icon">"</div><div class="stars">â˜…â˜…â˜…â˜…â˜…</div><p class="testimonial-text">"From evaluation to recovery, everything felt well organised and reassuring."</p><div class="patient-info"><div class="patient-avatar">R</div><div class="patient-details"><h5>Ramesh Pondicherry</h5><span>Multi-Organ Transplant</span></div></div></div></div>
         </div>
     </section>
     
@@ -2001,7 +2066,7 @@
         <div class="container">
             <div class="section-header reveal">
                 <h2>Frequently Asked Questions</h2>
-                <div class="royal-divider"><span class="royal-divider-icon">✦</span></div>
+                <div class="royal-divider"><span class="royal-divider-icon">âœ¦</span></div>
             </div>
 
             <div class="faq-container reveal"><div class="faq-item"><button class="faq-question">Who is eligible for Multi-Organ Transplant?<span class="faq-icon">+</span></button><div class="faq-answer"><div class="faq-answer-content">Eligibility depends on medical status, investigations, and multidisciplinary review. We assess each patient individually.</div></div></div><div class="faq-item"><button class="faq-question">How long is the evaluation process?<span class="faq-icon">+</span></button><div class="faq-answer"><div class="faq-answer-content">Workup can include blood tests, imaging, cardiac review, and counselling. The timeline varies by condition and donor availability.</div></div></div><div class="faq-item"><button class="faq-question">Will ICU care be needed?<span class="faq-icon">+</span></button><div class="faq-answer"><div class="faq-answer-content">Yes, transplant patients often require ICU-level monitoring before and after the procedure.</div></div></div><div class="faq-item"><button class="faq-question">Can relatives donate?<span class="faq-icon">+</span></button><div class="faq-answer"><div class="faq-answer-content">In some transplant pathways, living related donation may be possible if all medical and legal requirements are met.</div></div></div><div class="faq-item"><button class="faq-question">Is long-term medication required?<span class="faq-icon">+</span></button><div class="faq-answer"><div class="faq-answer-content">Yes. Long-term follow-up and medication adherence are essential to protect the graft and prevent complications.</div></div></div><div class="faq-item"><button class="faq-question">Does the team help with coordination?<span class="faq-icon">+</span></button><div class="faq-answer"><div class="faq-answer-content">Absolutely. Our coordinators help with investigations, donor workup, admission, and follow-up planning.</div></div></div></div>
@@ -2016,7 +2081,7 @@
             <div class="section-header reveal">
                 <h2>Popular Searches</h2>
                 <p>Patients often search for us with these terms.</p>
-                <div class="royal-divider"><span class="royal-divider-icon">✦</span></div>
+                <div class="royal-divider"><span class="royal-divider-icon">âœ¦</span></div>
             </div>
 
             <div class="tag-cloud reveal"><a href="#consultation" class="tag">Multi-Organ Transplant centre in Chennai</a><a href="#consultation" class="tag">Best transplant hospital in Chennai</a><a href="#consultation" class="tag">Advanced transplant care Aminjikarai</a><a href="#consultation" class="tag">Critical care and transplant team</a><a href="#consultation" class="tag">Multidisciplinary transplant surgery</a><a href="#consultation" class="tag">Multi-Organ Transplant treatment in Chennai</a><a href="#consultation" class="tag">Multi-Organ Transplant hospital in Aminjikarai</a><a href="#consultation" class="tag">Best Multi-Organ Transplant specialist near me</a></div>
@@ -2045,7 +2110,7 @@
                     <ul class="footer-links">
                         <li><a href="tel:+917200605493">Helpline: +91 72006 05493</a></li>
                         <li><a href="#consultation">Book Appointment</a></li>
-                        <li><a href="#">GEM Hospital, Aminjikarai, Chennai – 600029</a></li>
+                        <li><a href="#">GEM Hospital, Aminjikarai, Chennai â€“ 600029</a></li>
                     </ul>
                 </div>
             </div>
@@ -2216,7 +2281,7 @@
                         question.classList.add('active');
                         const answer = question.nextElementSibling;
                         answer.style.maxHeight = answer.scrollHeight + "px";
-                        question.querySelector('.faq-icon').innerText = '×';
+                        question.querySelector('.faq-icon').innerText = 'Ã—';
                     }
                 });
             });

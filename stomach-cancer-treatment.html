@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -229,22 +229,87 @@
             align-items: center;
         }
 
-        .logo {
-            font-family: 'Playfair Display', serif;
-            font-size: 1.8rem;
-            font-weight: 700;
-            color: var(--primary-green);
+                .logo-container {
             display: flex;
             align-items: center;
+            gap: 12px;
+            text-decoration: none;
         }
 
-        .navbar:not(.scrolled) .logo {
-            color: var(--white);
+        .logo-icon {
+            height: 50px;
+            width: 50px;
+            display: block;
+            flex-shrink: 0;
+            object-fit: contain;
+            filter: brightness(1.2);
+            transition: var(--transition);
         }
 
-        .logo-dot {
+        .logo-icon:hover {
+            filter: brightness(1.35);
+        }
+
+        .logo-text-group {
+            display: flex;
+            flex-direction: column;
+            line-height: 1.2;
+        }
+
+        .logo-main-text {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary-green);
+        }
+
+        .logo-sub-text {
+            font-size: 0.75rem;
             color: var(--deep-gold);
+            letter-spacing: 1px;
+            text-transform: uppercase;
         }
+
+        .navbar:not(.scrolled)         .logo-container {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            text-decoration: none;
+        }
+
+        .logo-icon {
+            height: 50px;
+            width: 50px;
+            display: block;
+            flex-shrink: 0;
+            object-fit: contain;
+            filter: brightness(1.2);
+            transition: var(--transition);
+        }
+
+        .logo-icon:hover {
+            filter: brightness(1.35);
+        }
+
+        .logo-text-group {
+            display: flex;
+            flex-direction: column;
+            line-height: 1.2;
+        }
+
+        .logo-main-text {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary-green);
+        }
+
+        .logo-sub-text {
+            font-size: 0.75rem;
+            color: var(--deep-gold);
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+
+        
 
         .nav-links {
             display: flex;
@@ -1759,7 +1824,7 @@
                 </div>
             </div>
             <a href="#consultation" class="btn btn-gold nav-cta">Book Free Consultation</a>
-            <button class="mobile-menu-btn" id="mobileMenuBtn">☰</button>
+            <button class="mobile-menu-btn" id="mobileMenuBtn">â˜°</button>
         </div>
     </nav>
 
@@ -1767,8 +1832,8 @@
     <div class="mobile-menu" id="mobileMenu">
         <button class="close-menu" id="closeMenuBtn">&times;</button>
         <div style="text-align: center; margin: 20px 0; display: flex; flex-direction: column; gap: 15px;">
-            <a href="https://maps.google.com/?q=GEM+Hospital+Aminjikarai+Chennai" target="_blank" style="color: var(--primary-green); font-weight: 700; font-size: 1.05rem; text-decoration: none;">📍 Chennai</a>
-            <a href="tel:+917200605493" style="color: var(--primary-green); font-weight: 700; font-size: 1.05rem; text-decoration: none;">📞 +91 7200605493</a>
+            <a href="https://maps.google.com/?q=GEM+Hospital+Aminjikarai+Chennai" target="_blank" style="color: var(--primary-green); font-weight: 700; font-size: 1.05rem; text-decoration: none;">ðŸ“ Chennai</a>
+            <a href="tel:+917200605493" style="color: var(--primary-green); font-weight: 700; font-size: 1.05rem; text-decoration: none;">ðŸ“ž +91 7200605493</a>
         </div>
         <a href="#consultation" class="btn btn-gold" style="margin-top: 20px; border:none; text-align:center; width: 100%;">Book Free Consultation</a>
     </div>
@@ -1826,7 +1891,7 @@
             <div class="section-header reveal">
                 <div class="section-badge">Specialized Care</div>
                 <h2>Types of Stomach Cancer Treatment We Treat</h2>
-                <div class="royal-divider"><span class="royal-divider-icon">✦</span></div>
+                <div class="royal-divider"><span class="royal-divider-icon">âœ¦</span></div>
             </div>
 
             <div class="hernia-grid">
@@ -1897,7 +1962,7 @@
             <div class="section-header reveal">
                 <h2>Treatment Journey for Stomach Cancer Treatment</h2>
                 <p style="font-size: 1.2rem; color: var(--white); max-width: 800px; margin: 15px auto;">A structured approach keeps care efficient, safe, and easy to understand.</p>
-                <div class="royal-divider"><span class="royal-divider-icon">✦</span></div>
+                <div class="royal-divider"><span class="royal-divider-icon">âœ¦</span></div>
                 <p style="max-width: 900px; margin: 0 auto; color: var(--text-light);">Care is planned around safety, symptom control, and the fastest sensible return to normal life.</p>
             </div>
 
@@ -1918,10 +1983,10 @@
             <div class="section-header reveal">
                 <h2>Recognise the Symptoms</h2>
                 <p style="font-size: 1.1rem; color: var(--text-light);">Know the common warning signs and seek help early.</p>
-                <div class="royal-divider"><span class="royal-divider-icon">✦</span></div>
+                <div class="royal-divider"><span class="royal-divider-icon">âœ¦</span></div>
             </div>
 
-            <div class="symptoms-grid"><div class="symptom-card reveal" style="transition-delay: 0.00s;"><div class="symptom-icon">🔵</div><div><h4>Persistent upper abdominal discomfort or pain</h4><p>Persistent upper abdominal discomfort or pain</p></div></div><div class="symptom-card reveal" style="transition-delay: 0.08s;"><div class="symptom-icon">🔵</div><div><h4>Bloating</h4><p>Bloating, nausea, or reduced appetite after meals</p></div></div><div class="symptom-card reveal" style="transition-delay: 0.00s;"><div class="symptom-icon">🔵</div><div><h4>Yellowing of the eyes or skin when bile flow is affected</h4><p>Yellowing of the eyes or skin when bile flow is affected</p></div></div><div class="symptom-card reveal" style="transition-delay: 0.08s;"><div class="symptom-icon">🔵</div><div><h4>Unexplained weight loss or loss of strength</h4><p>Unexplained weight loss or loss of strength</p></div></div><div class="symptom-card reveal" style="transition-delay: 0.00s;"><div class="symptom-icon">🔵</div><div><h4>Dark urine</h4><p>Dark urine, pale stools, or itching in cholestatic conditions</p></div></div><div class="symptom-card reveal" style="transition-delay: 0.08s;"><div class="symptom-icon">🔵</div><div><h4>Recurrent vomiting</h4><p>Recurrent vomiting, reflux, or trouble digesting meals</p></div></div></div>
+            <div class="symptoms-grid"><div class="symptom-card reveal" style="transition-delay: 0.00s;"><div class="symptom-icon">ðŸ”µ</div><div><h4>Persistent upper abdominal discomfort or pain</h4><p>Persistent upper abdominal discomfort or pain</p></div></div><div class="symptom-card reveal" style="transition-delay: 0.08s;"><div class="symptom-icon">ðŸ”µ</div><div><h4>Bloating</h4><p>Bloating, nausea, or reduced appetite after meals</p></div></div><div class="symptom-card reveal" style="transition-delay: 0.00s;"><div class="symptom-icon">ðŸ”µ</div><div><h4>Yellowing of the eyes or skin when bile flow is affected</h4><p>Yellowing of the eyes or skin when bile flow is affected</p></div></div><div class="symptom-card reveal" style="transition-delay: 0.08s;"><div class="symptom-icon">ðŸ”µ</div><div><h4>Unexplained weight loss or loss of strength</h4><p>Unexplained weight loss or loss of strength</p></div></div><div class="symptom-card reveal" style="transition-delay: 0.00s;"><div class="symptom-icon">ðŸ”µ</div><div><h4>Dark urine</h4><p>Dark urine, pale stools, or itching in cholestatic conditions</p></div></div><div class="symptom-card reveal" style="transition-delay: 0.08s;"><div class="symptom-icon">ðŸ”µ</div><div><h4>Recurrent vomiting</h4><p>Recurrent vomiting, reflux, or trouble digesting meals</p></div></div></div>
 
             <div class="symptoms-cta reveal">
                 <p>Concerned about persistent stomach cancer treatment? Book a consultation before symptoms progress.</p>
@@ -1937,7 +2002,7 @@
         <div class="container">
             <div class="section-header reveal">
                 <h2>Our Center Helplines</h2>
-                <div class="royal-divider"><span class="royal-divider-icon">✦</span></div>
+                <div class="royal-divider"><span class="royal-divider-icon">âœ¦</span></div>
             </div>
 
             <div class="helplines-grid"><a href="tel:+919150092609" class="helpline-card reveal" style="transition-delay: 0.00s;"><span class="helpline-location">Coimbatore</span><span class="helpline-number"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>+91 9150092609</span></a><a href="tel:+917200605493" class="helpline-card reveal" style="transition-delay: 0.08s;"><span class="helpline-location">Chennai</span><span class="helpline-number"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>+91 7200605493</span></a><a href="tel:+919150092609" class="helpline-card reveal" style="transition-delay: 0.00s;"><span class="helpline-location">Erode</span><span class="helpline-number"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>+91 9150092609</span></a><a href="tel:+918608204638" class="helpline-card reveal" style="transition-delay: 0.08s;"><span class="helpline-location">Pondicherry</span><span class="helpline-number"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>+91 8608204638</span></a><a href="tel:+919150092609" class="helpline-card reveal" style="transition-delay: 0.00s;"><span class="helpline-location">Tiruppur</span><span class="helpline-number"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>+91 9150092609</span></a><a href="tel:+918078711222" class="helpline-card reveal" style="transition-delay: 0.08s;"><span class="helpline-location">Thrissur</span><span class="helpline-number"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>+91 8078711222</span></a></div>
@@ -1953,7 +2018,7 @@
                 <div class="section-badge">Expert Team</div>
                 <h2>Meet Our Specialists</h2>
                 <p style="font-size: 1.1rem; color: var(--text-light); max-width: 650px; margin: 0 auto;">Experienced doctors and surgical teams focused on safe treatment, clear counselling, and reliable follow-up.</p>
-                <div class="royal-divider"><span class="royal-divider-icon">✦</span></div>
+                <div class="royal-divider"><span class="royal-divider-icon">âœ¦</span></div>
             </div>
 
             <div class="specialists-carousel reveal"><div class="doctor-card"><img class="doctor-photo" src="https://gemhospitals.com/uploads/doctors/1712323655_99e7552e6f7cfdf5e785.webp" alt="Dr. Jayanth Leo"><h4>Dr. Jayanth Leo</h4><p class="degree">MBBS, MS, FALS</p><span class="role">Surgical Gastroenterologist</span><a href="tel:+917200605493" class="doctor-phone"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>Book Appointment</a><a href="#consultation" class="btn btn-gold" style="padding: 10px 20px; font-size: 0.9rem;">Consult Now</a></div><div class="doctor-card"><img class="doctor-photo" src="https://gemhospitals.com/uploads/doctors/1778762806_7757e7bd80391fc44dcc.png" alt="Dr. Nayan Sri"><h4>Dr. Nayan Sri</h4><p class="degree">MBBS</p><span class="role">Medical Gastroenterologist</span><a href="tel:+917200605493" class="doctor-phone"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>Book Appointment</a><a href="#consultation" class="btn btn-gold" style="padding: 10px 20px; font-size: 0.9rem;">Consult Now</a></div><div class="doctor-card"><img class="doctor-photo" src="https://source.unsplash.com/featured/400x400/?surgeon,portrait" alt="Dr. D. Naveen"><h4>Dr. D. Naveen</h4><p class="degree">MS, MCh</p><span class="role">Oncosurgeon</span><a href="tel:+917200605493" class="doctor-phone"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>Book Appointment</a><a href="#consultation" class="btn btn-gold" style="padding: 10px 20px; font-size: 0.9rem;">Consult Now</a></div></div>
@@ -1972,7 +2037,7 @@
             <div class="section-header reveal">
                 <div class="section-badge">Medical Expertise</div>
                 <h2>Expert Insights</h2>
-                <div class="royal-divider"><span class="royal-divider-icon">✦</span></div>
+                <div class="royal-divider"><span class="royal-divider-icon">âœ¦</span></div>
             </div>
 
             <div class="insights-grid"><article class="insight-card reveal" style="transition-delay: 0.00s;"><img src="https://source.unsplash.com/featured/900x700/?hospital,Stomach+Cancer+Treatment,doctor" alt="How to Spot Early Warning Signs of Stomach Cancer Treatment" class="insight-image"><div class="insight-body"><h4>How to Spot Early Warning Signs of Stomach Cancer Treatment</h4><p>A patient-friendly guide to symptoms that should not be ignored.</p><a href="#consultation" class="insight-link">Read More</a></div></article><article class="insight-card reveal" style="transition-delay: 0.08s;"><img src="https://source.unsplash.com/featured/900x700/?hospital,Stomach+Cancer+Treatment,doctor" alt="When Minimally Invasive Treatment Makes Sense for Stomach Cancer Treatment" class="insight-image"><div class="insight-body"><h4>When Minimally Invasive Treatment Makes Sense for Stomach Cancer Treatment</h4><p>What patients should know about modern procedures and recovery timelines.</p><a href="#consultation" class="insight-link">Read More</a></div></article><article class="insight-card reveal" style="transition-delay: 0.16s;"><img src="https://source.unsplash.com/featured/900x700/?hospital,Stomach+Cancer+Treatment,doctor" alt="Diet, Recovery, and Follow-Up After Stomach Cancer Treatment Care" class="insight-image"><div class="insight-body"><h4>Diet, Recovery, and Follow-Up After Stomach Cancer Treatment Care</h4><p>Practical tips for healing, nutrition, and avoiding repeat flare-ups.</p><a href="#consultation" class="insight-link">Read More</a></div></article></div>
@@ -1987,10 +2052,10 @@
             <div class="section-header reveal">
                 <div class="section-badge">Testimonials</div>
                 <h2>Success Stories</h2>
-                <div class="royal-divider"><span class="royal-divider-icon">✦</span></div>
+                <div class="royal-divider"><span class="royal-divider-icon">âœ¦</span></div>
             </div>
 
-            <div class="testimonials-carousel reveal"><div class="testimonial-card"><div class="quote-icon">"</div><div class="stars">★★★★★</div><p class="testimonial-text">"The consultation was clear, the plan was practical, and the recovery was smoother than I expected."</p><div class="patient-info"><div class="patient-avatar">R</div><div class="patient-details"><h5>Ravi Chennai</h5><span>Stomach Cancer Treatment</span></div></div></div><div class="testimonial-card"><div class="quote-icon">"</div><div class="stars">★★★★★</div><p class="testimonial-text">"I felt supported at every step and the team explained the procedure in simple language."</p><div class="patient-info"><div class="patient-avatar">P</div><div class="patient-details"><h5>Priya Coimbatore</h5><span>Stomach Cancer Treatment</span></div></div></div><div class="testimonial-card"><div class="quote-icon">"</div><div class="stars">★★★★★</div><p class="testimonial-text">"The hospital handled everything professionally and I was home much sooner than I thought."</p><div class="patient-info"><div class="patient-avatar">A</div><div class="patient-details"><h5>Arun Pondicherry</h5><span>Stomach Cancer Treatment</span></div></div></div></div>
+            <div class="testimonials-carousel reveal"><div class="testimonial-card"><div class="quote-icon">"</div><div class="stars">â˜…â˜…â˜…â˜…â˜…</div><p class="testimonial-text">"The consultation was clear, the plan was practical, and the recovery was smoother than I expected."</p><div class="patient-info"><div class="patient-avatar">R</div><div class="patient-details"><h5>Ravi Chennai</h5><span>Stomach Cancer Treatment</span></div></div></div><div class="testimonial-card"><div class="quote-icon">"</div><div class="stars">â˜…â˜…â˜…â˜…â˜…</div><p class="testimonial-text">"I felt supported at every step and the team explained the procedure in simple language."</p><div class="patient-info"><div class="patient-avatar">P</div><div class="patient-details"><h5>Priya Coimbatore</h5><span>Stomach Cancer Treatment</span></div></div></div><div class="testimonial-card"><div class="quote-icon">"</div><div class="stars">â˜…â˜…â˜…â˜…â˜…</div><p class="testimonial-text">"The hospital handled everything professionally and I was home much sooner than I thought."</p><div class="patient-info"><div class="patient-avatar">A</div><div class="patient-details"><h5>Arun Pondicherry</h5><span>Stomach Cancer Treatment</span></div></div></div></div>
         </div>
     </section>
     
@@ -2001,7 +2066,7 @@
         <div class="container">
             <div class="section-header reveal">
                 <h2>Frequently Asked Questions</h2>
-                <div class="royal-divider"><span class="royal-divider-icon">✦</span></div>
+                <div class="royal-divider"><span class="royal-divider-icon">âœ¦</span></div>
             </div>
 
             <div class="faq-container reveal"><div class="faq-item"><button class="faq-question">What causes Stomach Cancer Treatment symptoms to worsen?<span class="faq-icon">+</span></button><div class="faq-answer"><div class="faq-answer-content">Inflammation, blockage, infection, or delayed treatment can make symptoms progress. We assess the underlying cause and guide treatment early.</div></div></div><div class="faq-item"><button class="faq-question">When should I seek specialist care for Stomach Cancer Treatment?<span class="faq-icon">+</span></button><div class="faq-answer"><div class="faq-answer-content">If pain, jaundice, vomiting, bleeding, or weight loss persists, you should see a specialist without delay.</div></div></div><div class="faq-item"><button class="faq-question">Can minimally invasive treatment help Stomach Cancer Treatment?<span class="faq-icon">+</span></button><div class="faq-answer"><div class="faq-answer-content">In many cases, laparoscopy or endoscopy can reduce pain, scarring, and recovery time while maintaining safety.</div></div></div><div class="faq-item"><button class="faq-question">Will I need admission for Stomach Cancer Treatment treatment?<span class="faq-icon">+</span></button><div class="faq-answer"><div class="faq-answer-content">That depends on the diagnosis, severity, and whether a procedure is required. Many evaluations are outpatient, while surgery may need short admission.</div></div></div><div class="faq-item"><button class="faq-question">Is diet important during recovery?<span class="faq-icon">+</span></button><div class="faq-answer"><div class="faq-answer-content">Yes. A tailored diet plan helps reduce symptoms, supports healing, and lowers recurrence of complications.</div></div></div><div class="faq-item"><button class="faq-question">Do you support insurance or cashless care?<span class="faq-icon">+</span></button><div class="faq-answer"><div class="faq-answer-content">Yes. Our team helps patients understand eligibility and coordinate the paperwork with their insurer.</div></div></div></div>
@@ -2016,7 +2081,7 @@
             <div class="section-header reveal">
                 <h2>Popular Searches</h2>
                 <p>Patients often search for us with these terms.</p>
-                <div class="royal-divider"><span class="royal-divider-icon">✦</span></div>
+                <div class="royal-divider"><span class="royal-divider-icon">âœ¦</span></div>
             </div>
 
             <div class="tag-cloud reveal"><a href="#consultation" class="tag">Stomach Cancer Treatment in Chennai</a><a href="#consultation" class="tag">Best Stomach Cancer Treatment Specialist in Chennai</a><a href="#consultation" class="tag">Stomach Cancer Treatment Treatment at GEM Hospital</a><a href="#consultation" class="tag">Advanced Stomach Cancer Treatment Care in Aminjikarai</a><a href="#consultation" class="tag">Minimally Invasive Stomach Cancer Treatment Treatment</a><a href="#consultation" class="tag">Stomach Cancer Treatment treatment in Chennai</a><a href="#consultation" class="tag">Stomach Cancer Treatment hospital in Aminjikarai</a><a href="#consultation" class="tag">Best Stomach Cancer Treatment specialist near me</a></div>
@@ -2045,7 +2110,7 @@
                     <ul class="footer-links">
                         <li><a href="tel:+917200605493">Helpline: +91 72006 05493</a></li>
                         <li><a href="#consultation">Book Appointment</a></li>
-                        <li><a href="#">GEM Hospital, Aminjikarai, Chennai – 600029</a></li>
+                        <li><a href="#">GEM Hospital, Aminjikarai, Chennai â€“ 600029</a></li>
                     </ul>
                 </div>
             </div>
@@ -2216,7 +2281,7 @@
                         question.classList.add('active');
                         const answer = question.nextElementSibling;
                         answer.style.maxHeight = answer.scrollHeight + "px";
-                        question.querySelector('.faq-icon').innerText = '×';
+                        question.querySelector('.faq-icon').innerText = 'Ã—';
                     }
                 });
             });

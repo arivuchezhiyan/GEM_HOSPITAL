@@ -927,25 +927,7 @@
             border-color: rgba(201, 168, 76, 0.5);
         }
 
-        .doctor-avatar {
-            width: 140px;
-            height: 140px;
-            background: linear-gradient(135deg, var(--soft-green) 0%, var(--primary-green) 100%);
-            color: var(--white);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 2.2rem;
-            font-weight: 700;
-            font-family: 'Playfair Display', serif;
-            margin: 0 auto 25px;
-            border: 4px solid var(--white);
-            box-shadow: 0 5px 20px rgba(14, 95, 75, 0.3), 0 0 0 3px var(--deep-gold);
-            overflow: hidden;
-            transition: var(--transition);
-            position: relative;
-        }
+        .doctor-avatar { width: 100px; height: 100px; border-radius: 50%; background: #e0e0e0; display: flex; align-items: center; justify-content: center; font-size: 32px; font-weight: bold; color: #333; margin: 0 auto 15px; overflow: hidden; position: relative; } .doctor-avatar img { width: 100%; height: 100%; object-fit: cover; position: absolute; top: 0; left: 0; } .doctor-avatar img[src=""], .doctor-avatar img:not([src]) { display: none; }
 
         .doctor-avatar img {
             width: 100%;
@@ -954,9 +936,7 @@
             object-position: center;
         }
 
-        .doctor-card:hover .doctor-avatar {
-            box-shadow: 0 8px 25px rgba(14, 95, 75, 0.4), 0 0 0 3px var(--deep-gold);
-        }
+        .doctor-card:hover .doctor-avatar { width: 100px; height: 100px; border-radius: 50%; background: #e0e0e0; display: flex; align-items: center; justify-content: center; font-size: 32px; font-weight: bold; color: #333; margin: 0 auto 15px; overflow: hidden; position: relative; } .doctor-avatar img { width: 100%; height: 100%; object-fit: cover; position: absolute; top: 0; left: 0; } .doctor-avatar img[src=""], .doctor-avatar img:not([src]) { display: none; }
 
         .doctor-card h4 {
             color: var(--primary-green);
@@ -2145,7 +2125,7 @@
 
             <div class="specialists-carousel reveal">
                 <div class="doctor-card">
-                    <div class="doctor-avatar">PS<img src="doctor1.jpg" alt="Dr. P. Senthilnathan" style="display:none;"></div>
+                    <div class="doctor-avatar"><img src="doctor1.jpg" alt="Dr. P. Senthilnathan" onerror="this.style.display=\'none\'; this.parentElement.textContent=\'PS\';" />PS</div>
                     <h4>Dr. P. Senthilnathan</h4>
                     <p class="degree">MS, DNB, MRCS, DNB (GI Surgery)</p>
                     <span class="role">Surgeon</span>
@@ -2162,7 +2142,7 @@
                         Consultation</a>
                 </div>
                 <div class="doctor-card">
-                    <div class="doctor-avatar">JL<img src="doctor2.jpg" alt="Dr. Jayanth Leo" style="display:none;"></div>
+                    <div class="doctor-avatar"><img src="doctor2.jpg" alt="Dr. Jayanth Leo" onerror="this.style.display=\'none\'; this.parentElement.textContent=\'JL\';" />JL</div>
                     <h4>Dr. Jayanth Leo</h4>
                     <p class="degree">MBBS, MS, FALS</p>
                     <span class="role">Surgeon</span>
@@ -2179,7 +2159,7 @@
                         Consultation</a>
                 </div>
                 <div class="doctor-card">
-                    <div class="doctor-avatar">DM<img src="doctor3.jpg" alt="Dr. Monika" style="display:none;"></div>
+                    <div class="doctor-avatar"><img src="doctor3.jpg" alt="Dr. Monika" onerror="this.style.display=\'none\'; this.parentElement.textContent=\'DM\';" />DM</div>
                     <h4>Dr. Monika</h4>
                     <p class="degree">MBBS, MS (General Surgery), FMAS</p>
                     <span class="role">Surgeon</span>
@@ -2196,7 +2176,7 @@
                         Consultation</a>
                 </div>
                 <div class="doctor-card">
-                    <div class="doctor-avatar">SK<img src="doctor4.jpg" alt="Dr. Sasi Kumar" style="display:none;"></div>
+                    <div class="doctor-avatar"><img src="doctor4.jpg" alt="Dr. Sasi Kumar" onerror="this.style.display=\'none\'; this.parentElement.textContent=\'SK\';" />SK</div>
                     <h4>Dr. Sasi Kumar</h4>
                     <p class="degree">MS (Gen. Surg), MCh (SGE)</p>
                     <span class="role">Surgeon</span>
@@ -2213,7 +2193,7 @@
                         Consultation</a>
                 </div>
                 <div class="doctor-card">
-                    <div class="doctor-avatar"><img src="doctorKS.jpg" alt="Doctor KS" onerror="this.parentElement.innerHTML=`KS`" /></div>
+                    <div class="doctor-avatar"><img src="doctorKS.jpg" alt="Doctor KS" onerror="this.style.display=\'none\'; this.parentElement.textContent=\'KS\';" />KS</div>
                     <h4>Dr. K. Sugumaran</h4>
                     <p class="degree">MS, MCh, FIAGES</p>
                     <span class="role">Surgeon</span>
@@ -2782,3 +2762,4 @@
 </body>
 
 </html>
+

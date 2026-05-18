@@ -248,12 +248,22 @@
             color: var(--white);
         }
 
-        .logo-icon {
-            height: 38px;
-            width: 38px;
+                .logo-icon {
+            height: 50px;
+            width: 50px;
             display: block;
             flex-shrink: 0;
             object-fit: contain;
+            filter: brightness(1.2);
+            transition: var(--transition);
+        }
+
+        .logo-icon:hover {
+            filter: brightness(1.35);
+        }
+
+        .logo-icon:hover {
+            filter: brightness(1.35);
         }
 
         .logo-dot {

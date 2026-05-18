@@ -1,0 +1,1438 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GEM Hospital - 29 Specialties | Multi-Specialty Medical Center Chennai</title>
+    <meta name="description" content="GEM Hospital offers 29 specialties across multiple centers. Expert care in general surgery, gastroenterology, urology, women's health, cardiology, and more. 30+ years of excellence.">
+    <meta property="og:title" content="GEM Hospital - India's Premier Multi-Specialty Medical Center">
+    <meta property="og:description" content="Expert care across 29 specialties. Single destination. Complete healthcare at GEM Hospital.">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap');
+
+        :root {
+            --primary-green: #0E5F4B;
+            --soft-green: #F0F6F4;
+            --dark-green: #146B52;
+            --deep-gold: #D4AF37;
+            --light-gold: #E0C15A;
+            --white: #FFFFFF;
+            --text-main: #1F2937;
+            --text-light: #4B5563;
+            --transition: all 0.3s ease;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--white);
+            color: var(--text-main);
+            overflow-x: hidden;
+            line-height: 1.6;
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Playfair Display', serif;
+            line-height: 1.2;
+            color: var(--text-main);
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .container {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .section-padding {
+            padding: 100px 0;
+        }
+
+        /* ===== NAVBAR ===== */
+        .navbar {
+            position: sticky;
+            top: 0;
+            background: var(--white);
+            box-shadow: 0 4px 20px rgba(14, 95, 75, 0.08);
+            z-index: 1000;
+            padding: 15px 0;
+        }
+
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary-green);
+            font-family: 'Playfair Display', serif;
+        }
+
+        .logo-dot {
+            color: var(--deep-gold);
+            font-size: 1.8rem;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 30px;
+            list-style: none;
+            align-items: center;
+        }
+
+        .nav-links a {
+            color: var(--text-main);
+            font-weight: 500;
+            transition: var(--transition);
+        }
+
+        .nav-links a:hover {
+            color: var(--primary-green);
+        }
+
+        .nav-cta {
+            background-color: var(--primary-green);
+            color: var(--white);
+            padding: 12px 24px;
+            border-radius: 50px;
+            border: 1px solid var(--deep-gold);
+            font-weight: 600;
+            box-shadow: 0 4px 15px rgba(14, 95, 75, 0.2);
+        }
+
+        .nav-cta:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(14, 95, 75, 0.3);
+        }
+
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+
+        /* ===== MOBILE MENU ===== */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+
+            .mobile-menu-btn {
+                display: block;
+            }
+
+            .mobile-menu {
+                position: fixed;
+                left: -300px;
+                top: 60px;
+                width: 280px;
+                height: calc(100vh - 60px);
+                background: var(--white);
+                box-shadow: 2px 0 20px rgba(0, 0, 0, 0.1);
+                padding: 20px;
+                transition: left 0.3s ease;
+                z-index: 999;
+                display: flex;
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            .mobile-menu.active {
+                left: 0;
+            }
+
+            .mobile-menu a {
+                padding: 10px;
+                color: var(--text-main);
+                font-weight: 500;
+            }
+
+            .overlay.active {
+                display: block;
+            }
+        }
+
+        .overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            z-index: 998;
+        }
+
+        .close-menu {
+            align-self: flex-end;
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+
+        /* ===== HERO SECTION ===== */
+        .hero {
+            background: linear-gradient(135deg, var(--primary-green) 0%, var(--dark-green) 100%);
+            color: var(--white);
+            padding: 120px 0;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -10%;
+            width: 600px;
+            height: 600px;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 50%;
+        }
+
+        .hero::after {
+            content: '';
+            position: absolute;
+            bottom: -30%;
+            left: -5%;
+            width: 500px;
+            height: 500px;
+            background: rgba(255, 255, 255, 0.03);
+            border-radius: 50%;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+            font-weight: 700;
+            line-height: 1.1;
+        }
+
+        .hero h1 span {
+            color: var(--light-gold);
+        }
+
+        .hero .subtitle {
+            font-size: 1.3rem;
+            margin-bottom: 30px;
+            opacity: 0.95;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .hero-pills {
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+            margin-bottom: 40px;
+            flex-wrap: wrap;
+        }
+
+        .hero-pill {
+            background: rgba(255, 255, 255, 0.15);
+            padding: 12px 20px;
+            border-radius: 50px;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            font-size: 0.95rem;
+            backdrop-filter: blur(10px);
+        }
+
+        .hero-ctas {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            margin-bottom: 60px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 14px 32px;
+            font-size: 1rem;
+            font-weight: 600;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: var(--transition);
+            text-align: center;
+            border: none;
+        }
+
+        .btn-gold {
+            background-color: var(--primary-green);
+            color: var(--white);
+            border: 1px solid var(--deep-gold);
+            box-shadow: 0 4px 15px rgba(14, 95, 75, 0.2);
+        }
+
+        .btn-gold:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(14, 95, 75, 0.3);
+        }
+
+        .btn-outline {
+            background: transparent;
+            color: var(--white);
+            border: 2px solid var(--white);
+        }
+
+        .btn-outline:hover {
+            background: var(--white);
+            color: var(--primary-green);
+        }
+
+        .hero-stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 40px;
+            margin-top: 60px;
+        }
+
+        .stat {
+            text-align: center;
+        }
+
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--light-gold);
+        }
+
+        .stat-label {
+            font-size: 0.95rem;
+            opacity: 0.9;
+        }
+
+        /* ===== REVEAL ANIMATION ===== */
+        .reveal {
+            opacity: 0;
+            transform: translateY(20px);
+            animation: revealUp 0.8s ease forwards;
+        }
+
+        @keyframes revealUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* ===== SERVICES SECTION ===== */
+        .services-section {
+            background: var(--soft-green);
+            padding: 100px 0;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 80px;
+        }
+
+        .section-header h2 {
+            font-size: 2.8rem;
+            margin-bottom: 15px;
+        }
+
+        .section-header .subtitle {
+            font-size: 1.1rem;
+            color: var(--text-light);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .family-section {
+            margin-bottom: 80px;
+        }
+
+        .family-header {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .family-header h3 {
+            font-size: 2rem;
+            color: var(--primary-green);
+            margin-bottom: 10px;
+        }
+
+        .family-divider {
+            width: 80px;
+            height: 3px;
+            background: var(--deep-gold);
+            margin: 0 auto;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 30px;
+        }
+
+        .service-card {
+            background: var(--white);
+            padding: 30px;
+            border-radius: 15px;
+            text-align: center;
+            box-shadow: 0 4px 20px rgba(14, 95, 75, 0.08);
+            transition: var(--transition);
+            cursor: pointer;
+            border: 2px solid transparent;
+        }
+
+        .service-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 8px 40px rgba(14, 95, 75, 0.15);
+            border-color: var(--deep-gold);
+        }
+
+        .service-icon {
+            font-size: 2.5rem;
+            color: var(--deep-gold);
+            margin-bottom: 15px;
+        }
+
+        .service-card h4 {
+            font-size: 1.3rem;
+            margin-bottom: 10px;
+            color: var(--primary-green);
+        }
+
+        .service-card p {
+            color: var(--text-light);
+            font-size: 0.95rem;
+            margin-bottom: 15px;
+        }
+
+        .learn-more {
+            color: var(--primary-green);
+            font-weight: 600;
+            font-size: 0.95rem;
+            transition: var(--transition);
+        }
+
+        .service-card:hover .learn-more {
+            color: var(--deep-gold);
+        }
+
+        /* ===== CENTERS SECTION ===== */
+        .centers-section {
+            padding: 100px 0;
+        }
+
+        .centers-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 30px;
+        }
+
+        .center-card {
+            background: linear-gradient(135deg, var(--primary-green), var(--dark-green));
+            color: var(--white);
+            padding: 30px;
+            border-radius: 15px;
+            text-align: center;
+            box-shadow: 0 4px 20px rgba(14, 95, 75, 0.2);
+            transition: var(--transition);
+        }
+
+        .center-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 8px 40px rgba(14, 95, 75, 0.3);
+        }
+
+        .center-card h4 {
+            font-size: 1.3rem;
+            margin-bottom: 10px;
+        }
+
+        .center-card p {
+            font-size: 0.95rem;
+            opacity: 0.9;
+            margin-bottom: 15px;
+        }
+
+        .center-phone {
+            display: inline-block;
+            background: rgba(255, 255, 255, 0.2);
+            padding: 10px 20px;
+            border-radius: 50px;
+            font-weight: 600;
+            transition: var(--transition);
+        }
+
+        .center-phone:hover {
+            background: var(--light-gold);
+            color: var(--primary-green);
+        }
+
+        /* ===== DOCTORS SECTION ===== */
+        .doctors-section {
+            background: var(--soft-green);
+            padding: 100px 0;
+        }
+
+        .doctors-carousel {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 30px;
+        }
+
+        .doctor-card {
+            background: var(--white);
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 4px 20px rgba(14, 95, 75, 0.08);
+            transition: var(--transition);
+            text-align: center;
+            padding: 20px;
+        }
+
+        .doctor-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 8px 40px rgba(14, 95, 75, 0.15);
+        }
+
+        .doctor-photo {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 12px;
+            margin-bottom: 15px;
+        }
+
+        .doctor-card h4 {
+            font-size: 1.2rem;
+            margin-bottom: 5px;
+        }
+
+        .doctor-title {
+            color: var(--text-light);
+            font-size: 0.9rem;
+            margin-bottom: 15px;
+        }
+
+        /* ===== CONSULTATION FORM ===== */
+        .consultation-section {
+            background: linear-gradient(135deg, var(--primary-green), var(--dark-green));
+            color: var(--white);
+            padding: 100px 0;
+        }
+
+        .consultation-container {
+            max-width: 500px;
+            margin: 0 auto;
+        }
+
+        .form-header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .form-header h2 {
+            font-size: 2rem;
+            margin-bottom: 10px;
+        }
+
+        .form-header p {
+            opacity: 0.9;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-control {
+            width: 100%;
+            padding: 12px 16px;
+            border: none;
+            border-radius: 8px;
+            font-size: 1rem;
+            font-family: 'Inter', sans-serif;
+        }
+
+        .form-control:focus {
+            outline: none;
+            box-shadow: 0 0 0 3px rgba(212, 175, 55, 0.3);
+        }
+
+        .form-button {
+            width: 100%;
+            padding: 14px;
+            background: var(--light-gold);
+            color: var(--primary-green);
+            border: none;
+            border-radius: 8px;
+            font-weight: 600;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .form-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(212, 175, 55, 0.3);
+        }
+
+        /* ===== FOOTER ===== */
+        .footer {
+            background: var(--text-main);
+            color: var(--white);
+            padding: 60px 0 20px;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-section h4 {
+            margin-bottom: 20px;
+            color: var(--light-gold);
+        }
+
+        .footer-links {
+            list-style: none;
+        }
+
+        .footer-links li {
+            margin-bottom: 10px;
+        }
+
+        .footer-links a {
+            color: var(--white);
+            opacity: 0.8;
+            transition: var(--transition);
+        }
+
+        .footer-links a:hover {
+            opacity: 1;
+            color: var(--light-gold);
+        }
+
+        .footer-tagline {
+            color: var(--white);
+            opacity: 0.8;
+            font-size: 0.95rem;
+            margin-bottom: 15px;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 12px;
+            margin-top: 15px;
+        }
+
+        .social-links a {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            font-weight: 700;
+            font-size: 0.8rem;
+            color: var(--white);
+            transition: var(--transition);
+        }
+
+        .social-links a:hover {
+            background: var(--light-gold);
+            color: var(--primary-green);
+            border-color: var(--light-gold);
+        }
+
+        .copyright {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            opacity: 0.8;
+            font-size: 0.9rem;
+        }
+
+        /* ===== WHATSAPP BUTTON ===== */
+        .whatsapp-button {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            width: 60px;
+            height: 60px;
+            background: #25D366;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+            cursor: pointer;
+            z-index: 100;
+            text-decoration: none;
+            transition: var(--transition);
+        }
+
+        .whatsapp-button:hover {
+            transform: scale(1.1);
+            box-shadow: 0 6px 30px rgba(0, 0, 0, 0.3);
+        }
+
+        .whatsapp-button img {
+            width: 35px;
+            height: 35px;
+        }
+
+        /* ===== RESPONSIVE ===== */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.2rem;
+            }
+
+            .hero .subtitle {
+                font-size: 1.1rem;
+            }
+
+            .hero-ctas {
+                flex-direction: column;
+            }
+
+            .hero-stats {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 20px;
+            }
+
+            .services-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .section-header h2 {
+                font-size: 2rem;
+            }
+
+            .family-header h3 {
+                font-size: 1.5rem;
+            }
+
+            .nav-links {
+                display: none;
+            }
+
+            .section-padding {
+                padding: 60px 0;
+            }
+        }
+
+        /* ===== SERVICE FINDER ===== */
+        .finder-section {
+            padding: 80px 0;
+            background: var(--white);
+        }
+
+        .finder-box {
+            max-width: 600px;
+            margin: 0 auto 40px;
+            background: var(--soft-green);
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 4px 20px rgba(14, 95, 75, 0.08);
+        }
+
+        .finder-input {
+            width: 100%;
+            padding: 14px 16px;
+            border: 2px solid var(--primary-green);
+            border-radius: 8px;
+            font-size: 1rem;
+            font-family: 'Inter', sans-serif;
+            transition: var(--transition);
+        }
+
+        .finder-input:focus {
+            outline: none;
+            box-shadow: 0 0 0 4px rgba(14, 95, 75, 0.1);
+        }
+
+        .finder-results {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+        }
+
+        .result-item {
+            background: var(--white);
+            padding: 15px;
+            border-radius: 8px;
+            border-left: 4px solid var(--deep-gold);
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .result-item:hover {
+            transform: translateX(5px);
+            box-shadow: 0 4px 15px rgba(14, 95, 75, 0.1);
+        }
+
+        .result-item strong {
+            color: var(--primary-green);
+        }
+
+        .result-item small {
+            color: var(--text-light);
+        }
+    </style>
+</head>
+
+<body>
+    <!-- NAVBAR -->
+    <nav class="navbar">
+        <div class="container nav-container">
+            <a href="#" class="logo">GEM Hospital<span class="logo-dot">.</span></a>
+            <ul class="nav-links">
+                <li><a href="#services">Services</a></li>
+                <li><a href="#centers">Centers</a></li>
+                <li><a href="#doctors">Specialists</a></li>
+                <li><a href="#consultation">Book Now</a></li>
+            </ul>
+            <a href="#consultation" class="btn btn-gold nav-cta">Book Consultation</a>
+            <button class="mobile-menu-btn" id="mobileMenuBtn">☰</button>
+        </div>
+    </nav>
+
+    <div class="overlay" id="overlay"></div>
+    <div class="mobile-menu" id="mobileMenu">
+        <button class="close-menu" id="closeMenuBtn">&times;</button>
+        <a href="#services">Services</a>
+        <a href="#centers">Centers</a>
+        <a href="#doctors">Specialists</a>
+        <a href="#consultation" class="btn btn-gold">Book Now</a>
+    </div>
+
+    <!-- HERO SECTION -->
+    <section class="hero" id="home">
+        <div class="container hero-content reveal">
+            <div class="section-badge" style="text-align: center; color: var(--light-gold); margin-bottom: 20px; font-size: 0.95rem; font-weight: 600;">🏆 India's Trusted Medical Specialists — 30+ Years of Excellence</div>
+            <h1>India's Premier <span>Multi-Specialty</span> Medical Center</h1>
+            <p class="subtitle">Expert care across <strong>29 specialties</strong>. Single destination. Complete healthcare.</p>
+
+            <div class="hero-pills">
+                <div class="hero-pill">✓ 29 Specialties</div>
+                <div class="hero-pill">✓ 7 Centers Across India</div>
+                <div class="hero-pill">✓ 500K+ Patients Helped</div>
+                <div class="hero-pill">✓ 30+ Years of Excellence</div>
+            </div>
+
+            <div class="hero-ctas">
+                <a href="#services" class="btn btn-gold">Explore Services</a>
+                <a href="#consultation" class="btn btn-outline">Book Consultation</a>
+            </div>
+
+            <div class="hero-stats">
+                <div class="stat reveal">
+                    <div class="stat-number">500K+</div>
+                    <div class="stat-label">Happy Patients</div>
+                </div>
+                <div class="stat reveal">
+                    <div class="stat-number">200K+</div>
+                    <div class="stat-label">Procedures Done</div>
+                </div>
+                <div class="stat reveal">
+                    <div class="stat-number">7</div>
+                    <div class="stat-label">Centers Nationwide</div>
+                </div>
+                <div class="stat reveal">
+                    <div class="stat-number">30+</div>
+                    <div class="stat-label">Years of Trust</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SERVICE FINDER -->
+    <section class="finder-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Find Your Specialist</h2>
+                <p class="subtitle">Search across all 29 specialties</p>
+            </div>
+            <div class="finder-box">
+                <input type="text" id="serviceSearch" class="finder-input" placeholder="Search specialty... (e.g., Cardiology, IVF, Urology)">
+            </div>
+            <div class="finder-results" id="finderResults" style="display: none;"></div>
+        </div>
+    </section>
+
+    <!-- SERVICES SECTION -->
+    <section class="services-section" id="services">
+        <div class="container">
+            <div class="section-header">
+                <h2>Our 29 Specialties</h2>
+                <p class="subtitle">Comprehensive medical care across multiple departments</p>
+            </div>
+
+            
+    <!-- Digestive & GI Health -->
+    <div class="family-section">
+        <div class="family-header">
+            <h3>Digestive &amp; GI Health</h3>
+            <div class="family-divider"></div>
+        </div>
+        <div class="services-grid">
+            <a href="jaundice.html" class="service-card reveal">
+                <div class="service-icon">✦</div>
+                <h4>Jaundice</h4>
+                <p>Specialized care for liver function disorders</p>
+                <span class="learn-more">Learn More →</span>
+            </a>
+            <a href="gall-bladder.html" class="service-card reveal">
+                <div class="service-icon">✦</div>
+                <h4>Gall Bladder</h4>
+                <p>Expert treatment for biliary conditions</p>
+                <span class="learn-more">Learn More →</span>
+            </a>
+            <a href="fissure.html" class="service-card reveal">
+                <div class="service-icon">✦</div>
+                <h4>Fissure</h4>
+                <p>Minimally invasive care for anal fissures</p>
+                <span class="learn-more">Learn More →</span>
+            </a>
+            <a href="piles.html" class="service-card reveal">
+                <div class="service-icon">✦</div>
+                <h4>Piles</h4>
+                <p>Advanced hemorrhoids treatment options</p>
+                <span class="learn-more">Learn More →</span>
+            </a>
+            <a href="digestive-cancer-care.html" class="service-card reveal">
+                <div class="service-icon">✦</div>
+                <h4>Digestive Cancer Care</h4>
+                <p>Comprehensive oncology for GI cancers</p>
+                <span class="learn-more">Learn More →</span>
+            </a>
+            <a href="esophagogastric-surgery.html" class="service-card reveal">
+                <div class="service-icon">✦</div>
+                <h4>Esophagogastric Surgery</h4>
+                <p>Specialized upper GI surgical procedures</p>
+                <span class="learn-more">Learn More →</span>
+            </a>
+            <a href="colorectal-surgery.html" class="service-card reveal">
+                <div class="service-icon">✦</div>
+                <h4>Colorectal Surgery</h4>
+                <p>Expert colorectal and rectal care</p>
+                <span class="learn-more">Learn More →</span>
+            </a>
+            <a href="upper-gastrointestinal-surgery.html" class="service-card reveal">
+                <div class="service-icon">✦</div>
+                <h4>Upper GI Surgery</h4>
+                <p>Advanced esophageal and gastric surgery</p>
+                <span class="learn-more">Learn More →</span>
+            </a>
+        </div>
+    </div>
+
+    <!-- Surgical Specialties -->
+    <div class="family-section">
+        <div class="family-header">
+            <h3>Surgical Specialties</h3>
+            <div class="family-divider"></div>
+        </div>
+        <div class="services-grid">
+            <a href="bariatric-surgery.html" class="service-card reveal">
+                <div class="service-icon">✦</div>
+                <h4>Bariatric Surgery</h4>
+                <p>Weight loss and metabolic surgery</p>
+                <span class="learn-more">Learn More →</span>
+            </a>
+            <a href="laparoscopic-robotic-surgery.html" class="service-card reveal">
+                <div class="service-icon">✦</div>
+                <h4>Laparoscopic / Robotic Surgery</h4>
+                <p>Minimally invasive surgical expertise</p>
+                <span class="learn-more">Learn More →</span>
+            </a>
+            <a href="hpb-surgery.html" class="service-card reveal">
+                <div class="service-icon">✦</div>
+                <h4>HPB Surgery</h4>
+                <p>Hepato-pancreato-biliary specialization</p>
+                <span class="learn-more">Learn More →</span>
+            </a>
+            <a href="liver-and-pancreas.html" class="service-card reveal">
+                <div class="service-icon">✦</div>
+                <h4>Liver and Pancreas</h4>
+                <p>Complex liver and pancreatic procedures</p>
+                <span class="learn-more">Learn More →</span>
+            </a>
+            <a href="endoscopy.html" class="service-card reveal">
+                <div class="service-icon">✦</div>
+                <h4>Endoscopy</h4>
+                <p>Diagnostic and therapeutic endoscopic care</p>
+                <span class="learn-more">Learn More →</span>
+            </a>
+            <a href="pancreatic-cancer.html" class="service-card reveal">
+                <div class="service-icon">✦</div>
+                <h4>Pancreatic Cancer</h4>
+                <p>Specialized pancreatic oncology care</p>
+                <span class="learn-more">Learn More →</span>
+            </a>
+        </div>
+    </div>
+
+    <!-- Urology & Kidney Care -->
+    <div class="family-section">
+        <div class="family-header">
+            <h3>Urology &amp; Kidney Care</h3>
+            <div class="family-divider"></div>
+        </div>
+        <div class="services-grid">
+            <a href="urology.html" class="service-card reveal">
+                <div class="service-icon">✦</div>
+                <h4>Urology</h4>
+                <p>Comprehensive urological care for all ages</p>
+                <span class="learn-more">Learn More →</span>
+            </a>
+            <a href="kidney-stone-treatment.html" class="service-card reveal">
+                <div class="service-icon">✦</div>
+                <h4>Kidney Stone Treatment</h4>
+                <p>Advanced stone management techniques</p>
+                <span class="learn-more">Learn More →</span>
+            </a>
+            <a href="nephrology.html" class="service-card reveal">
+                <div class="service-icon">✦</div>
+                <h4>Nephrology</h4>
+                <p>Medical kidney disease and dialysis care</p>
+                <span class="learn-more">Learn More →</span>
+            </a>
+            <a href="kidney-transplant.html" class="service-card reveal">
+                <div class="service-icon">✦</div>
+                <h4>Kidney Transplant</h4>
+                <p>Renal transplantation expertise</p>
+                <span class="learn-more">Learn More →</span>
+            </a>
+            <a href="multi-organ-transplant.html" class="service-card reveal">
+                <div class="service-icon">✦</div>
+                <h4>Multi-Organ Transplant</h4>
+                <p>Complex multi-organ transplant surgery</p>
+                <span class="learn-more">Learn More →</span>
+            </a>
+        </div>
+    </div>
+
+    <!-- Women's Health -->
+    <div class="family-section">
+        <div class="family-header">
+            <h3>Women&#39;s Health</h3>
+            <div class="family-divider"></div>
+        </div>
+        <div class="services-grid">
+            <a href="obstetrics-and-gynaecology.html" class="service-card reveal">
+                <div class="service-icon">✦</div>
+                <h4>Obstetrics and Gynaecology</h4>
+                <p>Complete maternal and gynecological care</p>
+                <span class="learn-more">Learn More →</span>
+            </a>
+            <a href="endogynecology.html" class="service-card reveal">
+                <div class="service-icon">✦</div>
+                <h4>Endogynecology</h4>
+                <p>Advanced gynecological endoscopy</p>
+                <span class="learn-more">Learn More →</span>
+            </a>
+            <a href="ivf.html" class="service-card reveal">
+                <div class="service-icon">✦</div>
+                <h4>IVF</h4>
+                <p>World-class fertility and reproductive medicine</p>
+                <span class="learn-more">Learn More →</span>
+            </a>
+        </div>
+    </div>
+
+    <!-- Medical & Chronic Care -->
+    <div class="family-section">
+        <div class="family-header">
+            <h3>Medical &amp; Chronic Care</h3>
+            <div class="family-divider"></div>
+        </div>
+        <div class="services-grid">
+            <a href="medical-gastroenterology.html" class="service-card reveal">
+                <div class="service-icon">✦</div>
+                <h4>Medical Gastroenterology</h4>
+                <p>Non-surgical digestive disease management</p>
+                <span class="learn-more">Learn More →</span>
+            </a>
+            <a href="diabetes.html" class="service-card reveal">
+                <div class="service-icon">✦</div>
+                <h4>Diabetes</h4>
+                <p>Comprehensive diabetes and endocrine care</p>
+                <span class="learn-more">Learn More →</span>
+            </a>
+            <a href="cardiology.html" class="service-card reveal">
+                <div class="service-icon">✦</div>
+                <h4>Cardiology</h4>
+                <p>Advanced cardiac and cardiovascular services</p>
+                <span class="learn-more">Learn More →</span>
+            </a>
+            <a href="endometriosis.html" class="service-card reveal">
+                <div class="service-icon">✦</div>
+                <h4>Endometriosis</h4>
+                <p>Specialized endometriosis treatment</p>
+                <span class="learn-more">Learn More →</span>
+            </a>
+        </div>
+    </div>
+
+    <!-- Comprehensive Care -->
+    <div class="family-section">
+        <div class="family-header">
+            <h3>Comprehensive Care</h3>
+            <div class="family-divider"></div>
+        </div>
+        <div class="services-grid">
+            <a href="obesity.html" class="service-card reveal">
+                <div class="service-icon">✦</div>
+                <h4>Obesity</h4>
+                <p>Weight management and metabolic solutions</p>
+                <span class="learn-more">Learn More →</span>
+            </a>
+            <a href="anesthesiology.html" class="service-card reveal">
+                <div class="service-icon">✦</div>
+                <h4>Anesthesiology</h4>
+                <p>Safe anesthesia care for all procedures</p>
+                <span class="learn-more">Learn More →</span>
+            </a>
+        </div>
+    </div>
+
+
+        </div>
+    </section>
+
+    <!-- CENTERS SECTION -->
+    <section class="centers-section" id="centers">
+        <div class="container">
+            <div class="section-header">
+                <h2>Our Centers Across India</h2>
+                <p class="subtitle">Accessible care in 7 strategic locations</p>
+            </div>
+            <div class="centers-grid">
+    <div class="center-card reveal">
+        <h4>Coimbatore</h4>
+        <p>GEM Hospital, Coimbatore</p>
+        <a href="tel:+91 9150092609" class="center-phone">📞 +91 9150092609</a>
+    </div>
+
+    <div class="center-card reveal">
+        <h4>Chennai - Aminjikarai</h4>
+        <p>GEM Hospital, Aminjikarai, Chennai – 600029</p>
+        <a href="tel:+91 7200605493" class="center-phone">📞 +91 7200605493</a>
+    </div>
+
+    <div class="center-card reveal">
+        <h4>Chennai - Perungudi</h4>
+        <p>GEM Hospital, Perungudi, Chennai</p>
+        <a href="tel:+91 7200605493" class="center-phone">📞 +91 7200605493</a>
+    </div>
+
+    <div class="center-card reveal">
+        <h4>Erode</h4>
+        <p>GEM Hospital, Erode</p>
+        <a href="tel:+91 9150092609" class="center-phone">📞 +91 9150092609</a>
+    </div>
+
+    <div class="center-card reveal">
+        <h4>Pondicherry</h4>
+        <p>GEM Hospital, Pondicherry</p>
+        <a href="tel:+91 8608204638" class="center-phone">📞 +91 8608204638</a>
+    </div>
+
+    <div class="center-card reveal">
+        <h4>Tiruppur</h4>
+        <p>GEM Hospital, Tiruppur</p>
+        <a href="tel:+91 9150092609" class="center-phone">📞 +91 9150092609</a>
+    </div>
+
+    <div class="center-card reveal">
+        <h4>Thrissur</h4>
+        <p>GEM Hospital, Thrissur</p>
+        <a href="tel:+91 8078711222" class="center-phone">📞 +91 8078711222</a>
+    </div>
+</div>
+        </div>
+    </section>
+
+    <!-- DOCTORS SECTION -->
+    <section class="doctors-section" id="doctors">
+        <div class="container">
+            <div class="section-header">
+                <h2>Meet Our Specialists</h2>
+                <p class="subtitle">Expert doctors dedicated to your health</p>
+            </div>
+            <div class="doctors-carousel">
+    <div class="doctor-card">
+        <img src="https://gemhospitals.com/uploads/doctors/1778762806_7757e7bd80391fc44dcc.png" alt="Dr. Nayan Sri" class="doctor-photo">
+        <h4>Dr. Nayan Sri</h4>
+        <p class="doctor-title">Medical Gastroenterologist</p>
+        <a href="#consultation" class="btn btn-gold" style="font-size: 0.9rem; padding: 8px 16px;">Book Now</a>
+    </div>
+
+    <div class="doctor-card">
+        <img src="https://gemhospitals.com/uploads/doctors/1712323655_99e7552e6f7cfdf5e785.webp" alt="Dr. Jayanth Leo" class="doctor-photo">
+        <h4>Dr. Jayanth Leo</h4>
+        <p class="doctor-title">Surgical Gastroenterologist</p>
+        <a href="#consultation" class="btn btn-gold" style="font-size: 0.9rem; padding: 8px 16px;">Book Now</a>
+    </div>
+
+    <div class="doctor-card">
+        <img src="https://gemhospitals.com/uploads/doctors/1758717082_ad9253f39dedc184655a.webp" alt="Dr. Monika" class="doctor-photo">
+        <h4>Dr. Monika</h4>
+        <p class="doctor-title">General Surgeon</p>
+        <a href="#consultation" class="btn btn-gold" style="font-size: 0.9rem; padding: 8px 16px;">Book Now</a>
+    </div>
+
+    <div class="doctor-card">
+        <img src="https://gemhospitals.com/uploads/doctors/default.png" alt="Dr. Kaarthiga R G" class="doctor-photo">
+        <h4>Dr. Kaarthiga R G</h4>
+        <p class="doctor-title">Senior Consultant</p>
+        <a href="#consultation" class="btn btn-gold" style="font-size: 0.9rem; padding: 8px 16px;">Book Now</a>
+    </div>
+</div>
+        </div>
+    </section>
+
+    <!-- CONSULTATION FORM -->
+    <section class="consultation-section" id="consultation">
+        <div class="container consultation-container">
+            <div class="form-header">
+                <h2>Book Free Consultation</h2>
+                <p>Choose your specialty and get a callback from our experts</p>
+            </div>
+            <form id="consultForm">
+                <div class="form-group">
+                    <input type="text" id="pName" class="form-control" placeholder="Your Name*" required>
+                </div>
+                <div class="form-group">
+                    <input type="tel" id="pMobile" class="form-control" placeholder="Mobile Number*" pattern="[0-9]{10}" required>
+                </div>
+                <div class="form-group">
+                    <select id="pSpecialty" class="form-control" required>
+                        <option value="" disabled selected>Select Specialty*</option>
+                        <optgroup label="Digestive &amp; GI Health">
+                            <option value="Jaundice">Jaundice</option>
+                            <option value="Gall Bladder">Gall Bladder</option>
+                            <option value="Fissure">Fissure</option>
+                            <option value="Piles">Piles</option>
+                            <option value="Digestive Cancer Care">Digestive Cancer Care</option>
+                            <option value="Esophagogastric Surgery">Esophagogastric Surgery</option>
+                            <option value="Colorectal Surgery">Colorectal Surgery</option>
+                            <option value="Upper GI Surgery">Upper GI Surgery</option>
+                        </optgroup>
+                        <optgroup label="Surgical Specialties">
+                            <option value="Bariatric Surgery">Bariatric Surgery</option>
+                            <option value="Laparoscopic / Robotic Surgery">Laparoscopic / Robotic Surgery</option>
+                            <option value="HPB Surgery">HPB Surgery</option>
+                            <option value="Liver and Pancreas">Liver and Pancreas</option>
+                            <option value="Endoscopy">Endoscopy</option>
+                            <option value="Pancreatic Cancer">Pancreatic Cancer</option>
+                        </optgroup>
+                        <optgroup label="Urology &amp; Kidney Care">
+                            <option value="Urology">Urology</option>
+                            <option value="Kidney Stone Treatment">Kidney Stone Treatment</option>
+                            <option value="Nephrology">Nephrology</option>
+                            <option value="Kidney Transplant">Kidney Transplant</option>
+                            <option value="Multi-Organ Transplant">Multi-Organ Transplant</option>
+                        </optgroup>
+                        <optgroup label="Women's Health">
+                            <option value="Obstetrics and Gynaecology">Obstetrics and Gynaecology</option>
+                            <option value="Endogynecology">Endogynecology</option>
+                            <option value="IVF">IVF</option>
+                        </optgroup>
+                        <optgroup label="Medical &amp; Chronic Care">
+                            <option value="Medical Gastroenterology">Medical Gastroenterology</option>
+                            <option value="Diabetes">Diabetes</option>
+                            <option value="Cardiology">Cardiology</option>
+                            <option value="Endometriosis">Endometriosis</option>
+                        </optgroup>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <select id="pCenter" class="form-control" required>
+                        <option value="" disabled selected>Select Center*</option>
+                        <option value="Coimbatore">Coimbatore</option>
+                        <option value="Chennai - Aminjikarai">Chennai - Aminjikarai</option>
+                        <option value="Chennai - Perungudi">Chennai - Perungudi</option>
+                        <option value="Erode">Erode</option>
+                        <option value="Pondicherry">Pondicherry</option>
+                        <option value="Tiruppur">Tiruppur</option>
+                        <option value="Thrissur">Thrissur</option>
+                    </select>
+                </div>
+                <button type="submit" class="form-button">Send Consultation Request</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-section">
+                    <div class="logo" style="margin-bottom: 15px;">GEM Hospital<span class="logo-dot">.</span></div>
+                    <p class="footer-tagline">World-class multi-specialty care across 29 departments. Your health, our priority.</p>
+                    <div class="social-links">
+                        <a href="https://www.facebook.com/gemhospitals" target="_blank" rel="noopener">F</a>
+                        <a href="https://www.instagram.com/gemhospitals/" target="_blank" rel="noopener">I</a>
+                        <a href="https://twitter.com/gemhospitals" target="_blank" rel="noopener">X</a>
+                        <a href="https://www.youtube.com/@GEMHospitals" target="_blank" rel="noopener">Y</a>
+                    </div>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Our Services</h4>
+                    <ul class="footer-links">
+                        <li><a href="jaundice.html">Jaundice</a></li>
+                        <li><a href="cardiology.html">Cardiology</a></li>
+                        <li><a href="ivf.html">IVF</a></li>
+                        <li><a href="urology.html">Urology</a></li>
+                        <li><a href="diabetes.html">Diabetes</a></li>
+                        <li><a href="obesity.html">Obesity</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="#services">All Specialties</a></li>
+                        <li><a href="#centers">Our Centers</a></li>
+                        <li><a href="#doctors">Our Doctors</a></li>
+                        <li><a href="#consultation">Book Consultation</a></li>
+                        <li><a href="tel:+917200605493">Call Us</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Contact Info</h4>
+                    <ul class="footer-links">
+                        <li><a href="tel:+917200605493">📞 +91 72006 05493</a></li>
+                        <li><a href="https://wa.me/917200605493" target="_blank">💬 WhatsApp Us</a></li>
+                        <li>GEM Hospital, Aminjikarai</li>
+                        <li>Chennai – 600029, India</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="copyright">
+                &copy; 2026 GEM Hospital. All rights reserved. | <a href="#" style="color: var(--light-gold);">Privacy Policy</a> | <a href="#" style="color: var(--light-gold);">Terms</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- WHATSAPP BUTTON -->
+    <a href="https://wa.me/917200605493" class="whatsapp-button" target="_blank" title="Chat with us on WhatsApp">
+        <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='white'%3E%3Cpath d='M17.6915026,13.4744748 C17.5908769,13.4744748 16.0154531,12.6676165 15.7274226,12.5675166 C15.4370094,12.4673227 15.2267097,12.5675166 15.0369287,12.7679389 C14.8185256,13.0024028 14.4899547,13.5814434 14.1505251,13.9954934 C13.9363225,14.2506587 13.5944194,14.2506587 13.4032389,14.0505956 C12.8854337,13.4744748 11.4796221,11.9417078 11.4796221,11.9417078 C10.9762211,11.4624501 10.5689544,10.8863294 10.1896481,10.1997722 C9.98785098,9.86189903 10.1896481,9.66875385 10.3880948,9.46815816 C10.5674585,9.29137607 10.8721038,8.93845037 10.973622,8.73785468 C11.1758193,8.34503076 10.973622,8.04406701 10.8740115,7.87632745 C10.1896481,6.51524985 9.50528458,5.15417222 8.82092106,3.79309459 C8.62313415,3.39052786 8.22936127,3.29037275 7.93882885,3.49096843 C7.34819211,3.89353516 6.75755538,4.29610189 6.16691864,4.70882907 C5.87638621,4.90197425 5.67859929,5.25489996 5.78930992,5.60782566 C6.98190423,9.5588894 9.00817148,13.1393127 12.9892606,15.4711583 C13.3290539,15.6718027 13.6687472,15.7722567 14.008539,15.8727106 C14.3004625,15.9499132 14.5900026,15.8619959 14.8816197,15.5267571 C15.4692932,14.8402999 16.0563046,14.1534703 16.643966,13.4668515 C16.9338444,13.0835046 17.323178,13.0024028 17.6131564,13.1894257 C18.2467836,13.5746267 18.8830268,13.9619677 19.5166541,14.3518089 C19.8074705,14.5522644 19.9085811,14.9447883 19.7097383,15.2802321 C19.2994062,16.0628701 18.888674,16.8455081 18.4789418,17.6281461 C18.1903899,18.0921202 17.6915026,18.2888821 17.1973031,18.1890706 C14.8016141,17.7047748 12.6024832,16.5164213 10.7047485,14.8403025 C7.6742317,12.2604137 5.58857981,8.93845037 4.40671849,5.08337407 C4.204875,4.49721158 3.91433258,4.09464485 3.51012954,3.79309459 C2.71649359,3.19130043 1.92285765,2.58950627 1.12922170,1.98771211 C0.839689271,1.78711642 0.639878399,1.3945925 0.840721503,1.06671936 C1.24493457,0.379862137 1.85157142,-0.219332028 2.4582082,0.0706624815 C4.85325844,1.27004934 7.24830869,2.46939928 9.64335893,3.66874922 C10.643366,4.21741433 11.4796221,4.51837809 12.5887084,4.51837809 C13.5944194,4.51837809 14.3032389,4.29137607 15.1405349,3.79309459 C16.340481,3.09649144 17.5402270,2.39988829 18.7400731,1.7032851 C19.2398503,1.41223221 19.9085811,1.50238732 20.3179142,2.08854982 C20.727247,2.67471231 20.9274311,3.26087481 21.1276152,3.84703731 C21.5275303,4.95614555 21.9274453,6.06525380 22.3273603,7.17436204 C22.5275444,7.75052454 22.4265338,8.34668704 22.0272007,8.63773993 C20.8274546,9.63928072 19.6277086,10.6408215 18.4289625,11.6423622 C18.1915158,11.8430066 17.9991858,12.1053335 17.6915026,13.4744748 Z'%3E%3C/path%3E%3C/svg%3E" alt="WhatsApp">
+    </a>
+
+    <script>
+        // Services data for search
+        const allServices = [{"name": "Jaundice", "slug": "jaundice", "desc": "Specialized care for liver function disorders"}, {"name": "Gall Bladder", "slug": "gall-bladder", "desc": "Expert treatment for biliary conditions"}, {"name": "Fissure", "slug": "fissure", "desc": "Minimally invasive care for anal fissures"}, {"name": "Piles", "slug": "piles", "desc": "Advanced hemorrhoids treatment options"}, {"name": "Digestive Cancer Care", "slug": "digestive-cancer-care", "desc": "Comprehensive oncology for GI cancers"}, {"name": "Esophagogastric Surgery", "slug": "esophagogastric-surgery", "desc": "Specialized upper GI surgical procedures"}, {"name": "Colorectal Surgery", "slug": "colorectal-surgery", "desc": "Expert colorectal and rectal care"}, {"name": "Upper GI Surgery", "slug": "upper-gastrointestinal-surgery", "desc": "Advanced esophageal and gastric surgery"}, {"name": "Bariatric Surgery", "slug": "bariatric-surgery", "desc": "Weight loss and metabolic surgery"}, {"name": "Laparoscopic / Robotic Surgery", "slug": "laparoscopic-robotic-surgery", "desc": "Minimally invasive surgical expertise"}, {"name": "HPB Surgery", "slug": "hpb-surgery", "desc": "Hepato-pancreato-biliary specialization"}, {"name": "Liver and Pancreas", "slug": "liver-and-pancreas", "desc": "Complex liver and pancreatic procedures"}, {"name": "Endoscopy", "slug": "endoscopy", "desc": "Diagnostic and therapeutic endoscopic care"}, {"name": "Pancreatic Cancer", "slug": "pancreatic-cancer", "desc": "Specialized pancreatic oncology care"}, {"name": "Urology", "slug": "urology", "desc": "Comprehensive urological care for all ages"}, {"name": "Kidney Stone Treatment", "slug": "kidney-stone-treatment", "desc": "Advanced stone management techniques"}, {"name": "Nephrology", "slug": "nephrology", "desc": "Medical kidney disease and dialysis care"}, {"name": "Kidney Transplant", "slug": "kidney-transplant", "desc": "Renal transplantation expertise"}, {"name": "Multi-Organ Transplant", "slug": "multi-organ-transplant", "desc": "Complex multi-organ transplant surgery"}, {"name": "Obstetrics and Gynaecology", "slug": "obstetrics-and-gynaecology", "desc": "Complete maternal and gynecological care"}, {"name": "Endogynecology", "slug": "endogynecology", "desc": "Advanced gynecological endoscopy"}, {"name": "IVF", "slug": "ivf", "desc": "World-class fertility and reproductive medicine"}, {"name": "Medical Gastroenterology", "slug": "medical-gastroenterology", "desc": "Non-surgical digestive disease management"}, {"name": "Diabetes", "slug": "diabetes", "desc": "Comprehensive diabetes and endocrine care"}, {"name": "Cardiology", "slug": "cardiology", "desc": "Advanced cardiac and cardiovascular services"}, {"name": "Endometriosis", "slug": "endometriosis", "desc": "Specialized endometriosis treatment"}, {"name": "Obesity", "slug": "obesity", "desc": "Weight management and metabolic solutions"}, {"name": "Anesthesiology", "slug": "anesthesiology", "desc": "Safe anesthesia care for all procedures"}];
+
+        // Mobile menu toggle
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const mobileMenu = document.getElementById('mobileMenu');
+        const overlay = document.getElementById('overlay');
+        const closeMenuBtn = document.getElementById('closeMenuBtn');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.add('active');
+            overlay.classList.add('active');
+        });
+
+        closeMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.remove('active');
+            overlay.classList.remove('active');
+        });
+
+        overlay.addEventListener('click', () => {
+            mobileMenu.classList.remove('active');
+            overlay.classList.remove('active');
+        });
+
+        // Service search functionality
+        const serviceSearch = document.getElementById('serviceSearch');
+        const finderResults = document.getElementById('finderResults');
+
+        serviceSearch.addEventListener('input', (e) => {
+            const query = e.target.value.toLowerCase();
+            
+            if (query.length < 2) {
+                finderResults.style.display = 'none';
+                return;
+            }
+
+            const filtered = allServices.filter(s => 
+                s.name.toLowerCase().includes(query) || 
+                s.desc.toLowerCase().includes(query)
+            );
+
+            if (filtered.length === 0) {
+                finderResults.innerHTML = '<div style="grid-column: 1/-1; text-align: center; padding: 20px; color: var(--text-light);">No services found</div>';
+                finderResults.style.display = 'grid';
+                return;
+            }
+
+            finderResults.innerHTML = filtered.map(s => 
+                `<a href="${s.slug}.html" class="result-item" style="text-decoration: none; color: inherit;">
+                    <strong>${s.name}</strong>
+                    <div style="font-size: 0.85rem; color: var(--text-light);">${s.desc}</div>
+                </a>`
+            ).join('');
+            finderResults.style.display = 'grid';
+        });
+
+        // Form submission
+        document.getElementById('consultForm').addEventListener('submit', (e) => {
+            e.preventDefault();
+            const name = document.getElementById('pName').value;
+            const phone = document.getElementById('pMobile').value;
+            const specialty = document.getElementById('pSpecialty').value;
+            const center = document.getElementById('pCenter').value;
+            
+            alert(`Thank you, ${name}! We will contact you at ${phone} regarding ${specialty} at ${center} center.`);
+            document.getElementById('consultForm').reset();
+        });
+
+        // Reveal animations on scroll
+        const revealElements = document.querySelectorAll('.reveal');
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.animation = 'revealUp 0.8s ease forwards';
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.1 });
+
+        revealElements.forEach(el => observer.observe(el));
+    </script>
+</body>
+
+</html>

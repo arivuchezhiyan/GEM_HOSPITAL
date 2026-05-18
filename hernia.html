@@ -238,10 +238,18 @@
             color: var(--primary-green);
             display: flex;
             align-items: center;
+            gap: 8px;
         }
 
         .navbar:not(.scrolled) .logo {
             color: var(--white);
+        }
+
+        .logo-icon {
+            height: 40px;
+            width: auto;
+            display: flex;
+            align-items: center;
         }
 
         .logo-dot {
@@ -1681,7 +1689,7 @@
     <!-- 1. STICKY NAVBAR -->
     <nav class="navbar" id="navbar">
         <div class="container nav-container">
-            <a href="#" class="logo">GEM Hospital<span class="logo-dot">.</span></a>
+            <a href="#" class="logo"><img src="gem_icon.png" alt="GEM Hospital" class="logo-icon"> GEM Hospital<span class="logo-dot">.</span></a>
             <ul class="nav-links">
                 <li><a href="#treatments">Treatments</a></li>
                 <li><a href="#symptoms">Symptoms</a></li>

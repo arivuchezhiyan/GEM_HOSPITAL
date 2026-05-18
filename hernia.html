@@ -229,6 +229,7 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
+            gap: 30px;
         }
 
         .logo {
@@ -239,6 +240,8 @@
             display: flex;
             align-items: center;
             gap: 8px;
+            flex-shrink: 0;
+            white-space: nowrap;
         }
 
         .navbar:not(.scrolled) .logo {
@@ -248,8 +251,8 @@
         .logo-icon {
             height: 40px;
             width: auto;
-            display: flex;
-            align-items: center;
+            display: block;
+            flex-shrink: 0;
         }
 
         .logo-dot {
@@ -259,6 +262,8 @@
         .nav-links {
             display: flex;
             gap: 25px;
+            flex: 1;
+            justify-content: center;
         }
 
         .nav-links a {
@@ -268,6 +273,7 @@
             position: relative;
             padding-bottom: 5px;
             opacity: 0.9;
+            white-space: nowrap;
         }
 
         .navbar:not(.scrolled) .nav-links a {
@@ -303,6 +309,13 @@
             color: var(--white);
             font-size: 1.5rem;
             cursor: pointer;
+        }
+
+        .nav-cta {
+            white-space: nowrap;
+            flex-shrink: 0;
+            padding: 12px 24px !important;
+            font-size: 0.95rem !important;
         }
 
         /* 2. HERO SECTION */

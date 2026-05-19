@@ -1880,17 +1880,15 @@
                         <h3>Book Your Free Consultation</h3>
                         <p>Get a call back from our medical experts</p>
                     </div>
-                    <form id="consultForm">
+                    <form id="consultForm" style="padding-bottom: 20px;">
                         <div class="form-group">
                             <input type="text" id="pName" class="form-control" placeholder="Patient Name*" required>
                         </div>
                         <div class="form-group">
                             <input type="tel" id="pMobile" class="form-control" placeholder="Mobile Number*" required
-                                pattern="[0-9]{10}">
+                                pattern="[0-9]{10}" maxlength="10" oninput="this.value = this.value.replace(/[^0-9]/g, '');">
                         </div>
-                        <div class="form-group">
-                            <input type="text" id="pCity" class="form-control" placeholder="City / Location*" required>
-                        </div>
+
                         <div class="form-group">
                             <select id="pCenter" class="form-control" required>
                                 <option value="" disabled selected>Select Center*</option>

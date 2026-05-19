@@ -2626,7 +2626,8 @@
                 });
             });
 
-            // 2. Mobile Menu
+            // 2. Mobile Menu (Removed)
+            /*
             const mobileMenuBtn = document.getElementById('mobileMenuBtn');
             const closeMenuBtn = document.getElementById('closeMenuBtn');
             const mobileMenu = document.getElementById('mobileMenu');
@@ -2638,13 +2639,16 @@
                 overlay.classList.toggle('active');
             }
 
-            mobileMenuBtn.addEventListener('click', toggleMenu);
-            closeMenuBtn.addEventListener('click', toggleMenu);
-            overlay.addEventListener('click', toggleMenu);
+            if (mobileMenuBtn) {
+                mobileMenuBtn.addEventListener('click', toggleMenu);
+                closeMenuBtn.addEventListener('click', toggleMenu);
+                overlay.addEventListener('click', toggleMenu);
 
-            mobileLinks.forEach(link => {
-                link.addEventListener('click', toggleMenu);
-            });
+                mobileLinks.forEach(link => {
+                    link.addEventListener('click', toggleMenu);
+                });
+            }
+            */
 
             // 3. Scroll Reveal Animations (Intersection Observer)
             const revealElements = document.querySelectorAll('.reveal');

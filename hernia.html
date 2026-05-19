@@ -2599,20 +2599,11 @@
             const navbar = document.getElementById('navbar');
             const floatingCTA = document.getElementById('floatingCTA');
 
-            window.addEventListener('scroll', () => {
-                if (window.scrollY > 50) {
-                    navbar.classList.add('scrolled');
-                } else {
-                    navbar.classList.remove('scrolled');
-                }
-
-                // Show floating CTA on scroll for mobile
-                if (window.scrollY > 300) {
-                    floatingCTA.classList.add('visible');
-                } else {
-                    floatingCTA.classList.remove('visible');
-                }
-            });
+            // Always show header and footer
+            navbar.classList.add('scrolled');
+            if (floatingCTA) {
+                floatingCTA.classList.add('visible');
+            }
 
             // Active Link Highlighting
             const sections = document.querySelectorAll('section');
@@ -2858,23 +2849,12 @@
                 observer.observe(specialistsSection);
             }
 
-            // 9. Show WhatsApp Icon Only at the End of the Web
+            // 9. Show WhatsApp Icon Always
             const waIcon = document.querySelector('.global-whatsapp');
             if (waIcon) {
-                waIcon.style.opacity = '0';
-                waIcon.style.pointerEvents = 'none';
+                waIcon.style.opacity = '1';
+                waIcon.style.pointerEvents = 'auto';
                 waIcon.style.transition = 'opacity 0.4s ease, transform 0.3s ease';
-
-                window.addEventListener('scroll', () => {
-                    // Check if user is near the bottom (within 500px of the end)
-                    if ((window.innerHeight + window.scrollY) >= document.body.offsetHeight - 500) {
-                        waIcon.style.opacity = '1';
-                        waIcon.style.pointerEvents = 'auto';
-                    } else {
-                        waIcon.style.opacity = '0';
-                        waIcon.style.pointerEvents = 'none';
-                    }
-                });
             }
         });
     </script>

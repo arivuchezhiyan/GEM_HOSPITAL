@@ -897,27 +897,75 @@
         .specialists-carousel {
             display: flex;
             gap: 30px;
-            overflow-x: auto;
             padding: 20px 10px 40px;
-            scroll-snap-type: x mandatory;
             scrollbar-width: none;
+            overflow: hidden;
+            position: relative;
+            width: 100%;
+            margin: 0 auto;
         }
 
         .specialists-carousel::-webkit-scrollbar {
             display: none;
         }
 
+        .carousel-inner {
+            display: flex;
+            gap: 30px;
+            animation: none;
+            width: fit-content;
+        }
+
+        .carousel-inner.auto-slide {
+            animation: carouselSlide 35s linear infinite;
+        }
+
+        @keyframes carouselSlide {
+            0% {
+                transform: translateX(0);
+            }
+            10% {
+                transform: translateX(-310px);
+            }
+            20% {
+                transform: translateX(-620px);
+            }
+            30% {
+                transform: translateX(-930px);
+            }
+            40% {
+                transform: translateX(-1240px);
+            }
+            50% {
+                transform: translateX(-1550px);
+            }
+            60% {
+                transform: translateX(-1860px);
+            }
+            70% {
+                transform: translateX(-2170px);
+            }
+            80% {
+                transform: translateX(-2480px);
+            }
+            90% {
+                transform: translateX(-2790px);
+            }
+            100% {
+                transform: translateX(0);
+            }
+        }
+
         .doctor-card {
-            min-width: 300px;
-            flex: 0 0 auto;
+            min-width: 280px;
+            flex: 0 0 280px;
             background: var(--white);
             border-radius: 15px;
             padding: 40px 20px 30px;
             text-align: center;
             box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
-            scroll-snap-align: start;
             border: 1px solid rgba(14, 95, 75, 0.1);
-            transition: var(--transition);
+            transition: all 0.3s ease;
             position: relative;
         }
 
@@ -2763,7 +2811,54 @@
                 });
             }
 
-            // 8. Show WhatsApp Icon Only at the End of the Web
+            // 8. Auto-sliding Doctors Carousel
+            const specialistsCarousel = document.querySelector('.specialists-carousel');
+            const specialistsSection = document.querySelector('.specialists-section');
+            
+            if (specialistsCarousel && specialistsSection) {
+                // Get all doctor cards
+                const doctorCards = Array.from(specialistsCarousel.querySelectorAll('.doctor-card'));
+                
+                // Clone all cards ONCE for seamless infinite loop (no double cloning)
+                doctorCards.forEach(card => {
+                    const clone = card.cloneNode(true);
+                    specialistsCarousel.appendChild(clone);
+                });
+                
+                // Create carousel inner wrapper
+                const carouselInner = document.createElement('div');
+                carouselInner.classList.add('carousel-inner');
+                carouselInner.style.width = 'fit-content';
+                
+                // Move all cards into carousel-inner
+                const allCards = specialistsCarousel.querySelectorAll('.doctor-card');
+                allCards.forEach(card => {
+                    carouselInner.appendChild(card);
+                });
+                
+                specialistsCarousel.innerHTML = '';
+                specialistsCarousel.appendChild(carouselInner);
+                
+                // Start animation when section is visible
+                const observerOptions = {
+                    threshold: 0.3,
+                    rootMargin: '0px'
+                };
+                
+                const observer = new IntersectionObserver((entries) => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            carouselInner.classList.add('auto-slide');
+                        } else {
+                            carouselInner.classList.remove('auto-slide');
+                        }
+                    });
+                }, observerOptions);
+                
+                observer.observe(specialistsSection);
+            }
+
+            // 9. Show WhatsApp Icon Only at the End of the Web
             const waIcon = document.querySelector('.global-whatsapp');
             if (waIcon) {
                 waIcon.style.opacity = '0';
